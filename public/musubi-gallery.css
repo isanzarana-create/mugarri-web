@@ -1,0 +1,110 @@
+/* ─────────────────────────────────────────────────────────────
+   MUSUBI GALLERY · componente de galería de Instagram
+   Sistema Musubigara® — se reutiliza en todas las webs del grupo.
+   Solo usa los tokens que ya define cada web:
+   --paper --ink --graphite --line --brand --font-mono --font-sans
+   ───────────────────────────────────────────────────────────── */
+
+.mg { --mg-gap: .4rem; }
+
+.mg-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: .8rem; font-family: var(--font-mono); font-size: .6rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--graphite);
+}
+.mg-head a { color: var(--brand); }
+.mg-live { display: inline-flex; align-items: center; gap: .35rem; }
+.mg-live::before {
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--brand); display: inline-block;
+  animation: mg-pulse 2.4s ease-in-out infinite;
+}
+@keyframes mg-pulse { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+
+.mg-grid {
+  display: grid; gap: var(--mg-gap); margin-top: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.mg-item {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 1 / 1; background: var(--line); cursor: zoom-in;
+}
+.mg-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1) contrast(1.02);
+  transition: filter .4s ease, transform .7s cubic-bezier(.22,1,.36,1);
+}
+.mg-item:hover img, .mg-item:focus-visible img { filter: none; transform: scale(1.04); }
+.mg-item:focus-visible { outline: 1px solid var(--brand); outline-offset: 2px; }
+
+.mg-item figcaption {
+  position: absolute; inset: auto 0 0 0; padding: .45rem .5rem;
+  font-family: var(--font-mono); font-size: .52rem; line-height: 1.5;
+  letter-spacing: .04em; color: var(--ink);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  border-top: 1px solid var(--line);
+  opacity: 0; transform: translateY(100%); transition: .3s cubic-bezier(.22,1,.36,1);
+}
+.mg-item:hover figcaption, .mg-item:focus-visible figcaption { opacity: 1; transform: none; }
+
+.mg-foot { margin-top: 1rem; }
+
+/* ── Variante página /galeria/ ─────────────────────────────── */
+.mg--page .mg-grid {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.6rem 1.1rem; margin-top: 2rem;
+}
+.mg--page .mg-item { cursor: zoom-in; }
+.mg--page figure { margin: 0; }
+.mg--page .mg-figcap {
+  margin-top: .55rem; font-family: var(--font-mono); font-size: .62rem;
+  line-height: 1.7; color: var(--ink);
+}
+.mg--page .mg-meta {
+  display: block; margin-top: .25rem; color: var(--graphite);
+  font-size: .55rem; letter-spacing: .08em; text-transform: uppercase;
+}
+
+/* ── Lightbox ──────────────────────────────────────────────── */
+.mg-lb {
+  position: fixed; inset: 0; z-index: 900; display: none;
+  background: color-mix(in srgb, var(--ink) 92%, transparent);
+  align-items: center; justify-content: center; padding: clamp(1rem, 4vw, 3rem);
+}
+.mg-lb.open { display: flex; }
+.mg-lb figure { margin: 0; max-width: min(900px, 92vw); text-align: center; }
+.mg-lb img {
+  max-width: 100%; max-height: 74vh; object-fit: contain; display: block;
+  margin: 0 auto; background: var(--paper);
+}
+.mg-lb figcaption {
+  margin-top: .9rem; font-family: var(--font-mono); font-size: .65rem;
+  line-height: 1.8; color: var(--paper); max-width: 60ch; margin-inline: auto;
+}
+.mg-lb .mg-lb-meta { display: block; margin-top: .35rem; color: #9b9b97;
+  font-size: .55rem; letter-spacing: .08em; text-transform: uppercase; }
+.mg-lb-close, .mg-lb-nav {
+  position: absolute; background: none; border: 0; cursor: pointer;
+  color: var(--paper); font-family: var(--font-mono); line-height: 1;
+  padding: .6rem; transition: opacity .2s;
+}
+.mg-lb-close { top: .8rem; right: 1rem; font-size: 1.4rem; }
+.mg-lb-nav { top: 50%; transform: translateY(-50%); font-size: 1.6rem; }
+.mg-lb-prev { left: .4rem; } .mg-lb-next { right: .4rem; }
+.mg-lb-close:hover, .mg-lb-nav:hover { opacity: .6; }
+
+/* ── Móvil ─────────────────────────────────────────────────── */
+@media (hover: none) {
+  .mg-item img { filter: none; }                 /* sin hover, foto a color */
+  .mg-item figcaption { display: none; }          /* el pie va debajo, no encima */
+}
+@media (max-width: 640px) {
+  .mg--page .mg-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem .5rem; }
+  .mg--page .mg-figcap { font-size: .58rem; line-height: 1.6; }
+  .mg-lb img { max-height: 64vh; }
+  .mg-lb-nav { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mg-item img, .mg-item figcaption { transition: none; }
+  .mg-live::before { animation: none; }
+}

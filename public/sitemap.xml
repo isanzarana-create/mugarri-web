@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mugarri.org/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+      <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/"/>
+  </url>
+  <url>
+    <loc>https://mugarri.org/en/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/"/>
+  </url>
+  <url>
+    <loc>https://mugarri.org/galeria/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/galeria/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/journal/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/galeria/"/>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-10-13-Eoxwht.webp</image:loc><image:title>No improvisamos rutas: las pisamos antes. De los muelles del Cantábrico a los secanos…</image:title></image:image>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-10-11-j8RVJQ.webp</image:loc><image:title>Cada experiencia de gravel o trail running se diseña a medida, por caminos que no…</image:title></image:image>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-09-30-vmDFzt.webp</image:loc><image:title>Nadie se enamora de un track: se enamora de una ruta pensada para él. Turismo activo…</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mugarri.org/en/journal/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/galeria/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/journal/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/galeria/"/>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-10-13-Eoxwht.webp</image:loc><image:title>No improvisamos rutas: las pisamos antes. De los muelles del Cantábrico a los secanos…</image:title></image:image>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-10-11-j8RVJQ.webp</image:loc><image:title>Cada experiencia de gravel o trail running se diseña a medida, por caminos que no…</image:title></image:image>
+    <image:image><image:loc>https://mugarri.org/fotos/ig-2026-09-30-vmDFzt.webp</image:loc><image:title>Nadie se enamora de un track: se enamora de una ruta pensada para él. Turismo activo…</image:title></image:image>
+  </url>
+</urlset>

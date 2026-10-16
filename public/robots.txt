@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow Netlify internal scripts
+Disallow: /.netlify/
+
+Sitemap: https://mugarri.org/sitemap.xml
