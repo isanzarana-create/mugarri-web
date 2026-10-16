@@ -1,0 +1,53 @@
+name: Instagram → web
+
+# Se ejecuta cada 6 horas (a y 17 para no coincidir con la hora en punto)
+# y también a mano desde la pestaña "Actions" de GitHub.
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        site: [mugarri]        # añade aquí musubigara, larre… cuando toque
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm ci || npm install
+
+      - name: Sincronizar fotos
+        id: sync
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          BEHOLD_FEED: ${{ secrets.BEHOLD_FEED }}
+        run: node sync.mjs ${{ matrix.site }}.json
+
+      - name: Guardar el token renovado
+        if: steps.sync.outputs.new_token != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh secret set IG_TOKEN --body "${{ steps.sync.outputs.new_token }}"
+
+      - name: Publicar los cambios
+        run: |
+          git config user.name  "Musubi Gallery"
+          git config user.email "bot@musubigara.org"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Sin fotos nuevas: no hay nada que publicar."
+          else
+            git commit -m "Galería: fotos nuevas de Instagram (${{ matrix.site }})"
+            git push
+          fi
