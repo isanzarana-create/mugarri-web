@@ -1,0 +1,62 @@
+{
+  "site": "mugarri",
+  "domain": "https://mugarri.org",
+  "publicDir": "public",
+  "photoDir": "fotos",
+  "instagram": "muga.rri",
+  "source": "instagram",
+  "beholdFeed": "",
+  "fetchLimit": 25,
+  "maxPhotos": 48,
+  "panelCount": 6,
+  "square": true,
+  "brand": {
+    "name": "Mugarri",
+    "color": "#C21838",
+    "parent": "Musubigara®",
+    "parentUrl": "https://musubigara.org",
+    "parentSameAs": [
+      "https://www.instagram.com/musubi.gara/",
+      "https://www.linkedin.com/company/136037162/"
+    ]
+  },
+  "fontsHref": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap",
+  "pageStyleFile": "page.css",
+  "index": {
+    "file": "index.html",
+    "marker": "MUSUBI-GALLERY"
+  },
+  "fallbackCaption": "Gravel y trail running en el País Vasco con Mugarri",
+  "languages": [
+    {
+      "code": "es",
+      "path": "galeria/",
+      "num": "06",
+      "h1": "Diario",
+      "title": "Diario: gravel y trail running en Álava y Navarra | Mugarri",
+      "description": "Las últimas salidas de Mugarri en imágenes: rutas de gravel y trail running por Álava, Navarra y el resto del País Vasco. Turismo activo artesano.",
+      "intro": "Aquí dejamos lo que vamos viendo: rutas de <strong>gravel</strong> y <strong>trail running</strong> que reconocemos por Álava, Navarra y el resto del País Vasco, carreras que montamos y el terreno tal y como está cada semana. Son las mismas fotos que publicamos en Instagram, alojadas aquí para que carguen rápido y sin rastreadores de terceros.",
+      "updatedLabel": "Actualizado",
+      "follow": "Seguir en Instagram",
+      "back": "Volver a mugarri.org",
+      "footer": "Un proyecto de <a href=\"https://musubigara.org\" rel=\"noopener\">Musubigara®</a>",
+      "home": ""
+    },
+    {
+      "code": "en",
+      "path": "en/journal/",
+      "num": "06",
+      "h1": "Journal",
+      "title": "Journal: gravel and trail in the Basque Country | Mugarri",
+      "description": "The latest Mugarri outings in pictures: bespoke gravel and trail running routes across Álava, Navarre and the rest of the Basque Country.",
+      "intro": "This is what we have been seeing: <strong>gravel</strong> and <strong>trail running</strong> routes we scout across Álava, Navarre and the rest of the Basque Country, races we build, and the ground exactly as it is each week. The same photos we publish on Instagram, hosted here so they load fast and with no third-party trackers.",
+      "updatedLabel": "Updated",
+      "follow": "Follow on Instagram",
+      "back": "Back to mugarri.org",
+      "footer": "A project by <a href=\"https://musubigara.org\" rel=\"noopener\">Musubigara®</a>",
+      "home": "en/"
+    }
+  ],
+  "rootUp": ".",
+  "webDir": "."
+}
