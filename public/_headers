@@ -1,6 +1,18 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000
+
+# Fotos de Instagram: el nombre incluye fecha e identificador, nunca se reutiliza
 /fotos/*
   Cache-Control: public, max-age=31536000, immutable
 
-/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
+# Imagen principal y CSS/JS: se revalidan cada dia
+/img/*
+  Cache-Control: public, max-age=604800
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
