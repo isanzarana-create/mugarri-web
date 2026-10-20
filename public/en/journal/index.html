@@ -71,6 +71,9 @@ footer.site a:hover{color:var(--brand)}
 
 /* El sitio oculta el distintivo de Netlify; la galería hace lo mismo. */
 #nl-badge-frame, iframe[title="Powered by Netlify"] { display: none !important; }
+.related{margin-top:3rem}
+.related ul{list-style:none;margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase}
+.related a:hover{color:var(--brand)}
 </style>
 <script type="application/ld+json">
 {
@@ -252,9 +255,12 @@ footer.site a:hover{color:var(--brand)}
       </figure>
   </div>
   <a class="service-cta" href="https://www.instagram.com/muga.rri/" target="_blank" rel="noopener">Follow on Instagram &rarr;</a>
+  <nav class="related" aria-label="Mugarri">
+    <ul><li><a href="/en/about/">Who we are</a></li><li><a href="/en/meaning/">What does Mugarri mean?</a></li><li><a href="/en/what-we-offer/">What we offer</a></li><li><a href="/en/gravel/">Bespoke gravel routes</a></li><li><a href="/en/trail-running/">Bespoke trail running routes</a></li><li><a href="/en/events/">Mountain sports events</a></li><li><a href="/en/contact/">Contact</a></li></ul>
+  </nav>
   <footer class="site">
     <span>A project by <a href="https://musubigara.org" rel="noopener">Musubigara®</a></span>
-    <span><a href="/">Back to mugarri.org</a></span>
+    <span><a href="/en/">Back to mugarri.org</a></span>
   </footer>
 </main>
 <script>window.MUSUBI_GALLERY_BASE='/fotos/';</script>

@@ -287,9 +287,12 @@ ${jsonld(photos, lang, L, updated)}
 ${figures(photos, lang, cfg.photoDir)}
   </div>
   <a class="service-cta" href="https://www.instagram.com/${cfg.instagram}/" target="_blank" rel="noopener">${esc(L.follow)} &rarr;</a>
+  ${(cfg.pages || []).length ? `<nav class="related" aria-label="Mugarri">
+    <ul>${cfg.pages.map(pg => `<li><a href="/${pg[lang].path}">${esc(pg[lang].label)}</a></li>`).join('')}</ul>
+  </nav>` : ''}
   <footer class="site">
     <span>${L.footer}</span>
-    <span><a href="/">${esc(L.back)}</a></span>
+    <span><a href="/${L.home ?? ''}">${esc(L.back)}</a></span>
   </footer>
 </main>
 <script>window.MUSUBI_GALLERY_BASE='/${cfg.photoDir}/';</script>
@@ -364,6 +367,16 @@ async function writeSitemap(photos, updated) {
     cfg.languages.forEach((L, i) => entries.push({
       loc: `${cfg.domain}/${L.home ?? ''}`, prio: i === 0 ? '1.0' : '0.9',
       freq: 'weekly', alts: alts('home'), images: []
+    }));
+  }
+  // páginas de contenido (quiénes somos, servicios, contacto…), con hreflang recíprocos
+  for (const pg of (cfg.pages || [])) {
+    const pAlts = cfg.languages.map(L =>
+      `      <xhtml:link rel="alternate" hreflang="${L.code}" href="${cfg.domain}/${pg[L.code].path}"/>`)
+      .concat([`      <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.domain}/${pg[L0.code].path}"/>`])
+      .join('\n');
+    cfg.languages.forEach(L => entries.push({
+      loc: `${cfg.domain}/${pg[L.code].path}`, prio: '0.7', freq: 'monthly', alts: pAlts, images: []
     }));
   }
   // galerías (una por idioma) con sus imágenes

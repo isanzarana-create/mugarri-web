@@ -43,3 +43,7 @@ footer.site a:hover{color:var(--brand)}
 
 /* El sitio oculta el distintivo de Netlify; la galería hace lo mismo. */
 #nl-badge-frame, iframe[title="Powered by Netlify"] { display: none !important; }
+
+.related{margin-top:3rem}
+.related ul{list-style:none;margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase}
+.related a:hover{color:var(--brand)}

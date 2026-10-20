@@ -59,7 +59,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-num { color: var(--brand); min-width: 22px; font-size: 0.65rem; }
 
-.lang-btn { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--graphite); background: none; border: 1px solid var(--line); padding: 0.2rem 0.5rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+.lang-btn { display: inline-block; line-height: 1.2; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--graphite); background: none; border: 1px solid var(--line); padding: 0.2rem 0.5rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
 
 .lang-btn:hover { color: var(--ink); border-color: var(--graphite); }
 
@@ -449,15 +449,15 @@ button { font-family: inherit; cursor: pointer; }
             <span></span><span></span><span></span>
           </button>
           <nav class="nav-dropdown" id="nav-dropdown" role="navigation">
-            <a data-section="who"><span class="nav-num">01</span><span data-t="nav-01">Quiénes somos</span></a>
-            <a data-section="meaning"><span class="nav-num">02</span><span data-t="nav-02">¿Qué significa Mugarri?</span></a>
-            <a data-section="offer"><span class="nav-num">03</span><span data-t="nav-03">Qué ofrecemos</span></a>
+            <a data-section="who" href="/quienes-somos/"><span class="nav-num">01</span><span data-t="nav-01">Quiénes somos</span></a>
+            <a data-section="meaning" href="/significado/"><span class="nav-num">02</span><span data-t="nav-02">¿Qué significa Mugarri?</span></a>
+            <a data-section="offer" href="/que-ofrecemos/"><span class="nav-num">03</span><span data-t="nav-03">Qué ofrecemos</span></a>
             <a data-section="collab"><span class="nav-num">04</span><span data-t="nav-04">¿Colaboramos?</span></a>
-            <a data-section="contact"><span class="nav-num">05</span><span data-t="nav-05">Contacto</span></a><a data-section="diary"><span class="nav-num">06</span><span data-t="nav-06">Diario</span></a>
+            <a data-section="contact" href="/contacto/"><span class="nav-num">05</span><span data-t="nav-05">Contacto</span></a><a data-section="diary" href="/galeria/"><span class="nav-num">06</span><span data-t="nav-06">Diario</span></a>
           </nav>
         </div>
 
-        <button class="lang-btn" id="lang-btn" aria-label="Change language">EN</button>
+        <a class="lang-btn" id="lang-btn" href="/en/" hreflang="en" lang="en" aria-label="English">EN</a>
       </div>
     </div>
   </header>
@@ -791,17 +791,6 @@ Pintor Pablo Uranga 12, 01008 Vitoria-Gasteiz, Álava, Spain<br>
       });
       document.getElementById('lang-btn').textContent = l === 'es' ? 'EN' : 'ES';
     }
-
-    document.getElementById('lang-btn').addEventListener('click', () => {
-      const next = lang === 'es' ? 'en' : 'es';
-      setLang(next);
-      // Update canonical + og:url for crawlers
-      const base = 'https://mugarri.org/';
-      const url = location.origin + location.pathname;
-      document.getElementById('canonical-link').setAttribute('href', url);
-      const ogUrl = document.getElementById('og-url');
-      if (ogUrl) ogUrl.setAttribute('content', url);
-    });
 
     // Detect lang from URL on load
     if (window.location.pathname.startsWith('/en')) {

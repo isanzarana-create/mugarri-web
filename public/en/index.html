@@ -59,7 +59,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-num { color: var(--brand); min-width: 22px; font-size: 0.65rem; }
 
-.lang-btn { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--graphite); background: none; border: 1px solid var(--line); padding: 0.2rem 0.5rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+.lang-btn { display: inline-block; line-height: 1.2; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--graphite); background: none; border: 1px solid var(--line); padding: 0.2rem 0.5rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
 
 .lang-btn:hover { color: var(--ink); border-color: var(--graphite); }
 
@@ -278,7 +278,7 @@ button { font-family: inherit; cursor: pointer; }
     "@type": ["LocalBusiness", "TouristInformationCenter", "TouristAttraction"],
     "name": "Mugarri",
     "alternateName": "Mugarri Ekintza Elkartea",
-    "description": "Turismo activo artesano — experiencias de gravel y trail running a medida en el País Vasco y Navarra. Custom, tailored, con mimo. By Musubigara®. Ningún producto es igual.",
+    "description": "Artisan active tourism — bespoke gravel and trail running experiences in the Basque Country and Navarre. Custom, tailored, con mimo. By Musubigara®. No two products are the same.",
     "url": "https://mugarri.org/",
     "email": "ignacio@musubigara.org",
     "telephone": "+34620463558",
@@ -301,10 +301,10 @@ button { font-family: inherit; cursor: pointer; }
       "longitude": "-2.6726"
     },
     "areaServed": [
-      {"@type": "AdministrativeArea", "name": "País Vasco"},
+      {"@type": "AdministrativeArea", "name": "Basque Country"},
       {"@type": "AdministrativeArea", "name": "Navarra"}
     ],
-    "knowsAbout": ["gravel cycling", "trail running", "turismo activo", "rutas personalizadas"],
+    "knowsAbout": ["gravel cycling", "trail running", "active tourism", "bespoke routes"],
     "sameAs": [
       "https://musubigara.org",
       "https://www.instagram.com/musubigara/",
@@ -312,20 +312,20 @@ button { font-family: inherit; cursor: pointer; }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Experiencias de turismo activo artesano",
+      "name": "Artisan active tourism experiences",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rutas de gravel a medida — País Vasco y Navarra"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rutas de trail running a medida — País Vasco y Navarra"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Organización de eventos deportivos de montaña"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Red de alojamientos especializados en turismo activo"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bespoke gravel routes — Basque Country and Navarre"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bespoke trail running routes — Basque Country and Navarre"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mountain sports event organisation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Network of accommodations specialised in active tourism"}}
       ]
     },
     "event": {
       "@type": "SportsEvent",
       "name": "LARRE Long Distance",
       "url": "https://larrelongdistance.org",
-      "description": "Ultra-trail de 214 km en las sierras de Álava, organizado por Musubigara®",
-      "location": {"@type": "Place", "name": "Sierra de Álava, Euskadi", "address": {"@type": "PostalAddress", "addressRegion": "Álava", "addressCountry": "ES"}},
+      "description": "214 km ultra-trail through the mountains of Álava, organised by Musubigara®",
+      "location": {"@type": "Place", "name": "Álava mountains, Basque Country", "address": {"@type": "PostalAddress", "addressRegion": "Álava", "addressCountry": "ES"}},
       "organizer": {"@type": "Organization", "name": "Musubigara®", "url": "https://musubigara.org"}
     }
   }
@@ -426,7 +426,7 @@ button { font-family: inherit; cursor: pointer; }
 
   <header class="topbar">
     <div class="topbar-inner">
-      <a href="https://mugarri.org/" class="wordmark" aria-label="Mugarri">Mugarri<sup>®</sup></a>
+      <a href="https://mugarri.org/en/" class="wordmark" aria-label="Mugarri">Mugarri<sup>®</sup></a>
       <div class="topbar-right">
 
         <div class="topbar-icons">
@@ -439,25 +439,25 @@ button { font-family: inherit; cursor: pointer; }
           <a class="icon-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Pintor+Pablo+Uranga+12,+01008+Vitoria-Gasteiz" target="_blank" rel="noopener" aria-label="Ubicación">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
           </a>
-          <a class="icon-btn" href="https://www.instagram.com/musubigara/" target="_blank" rel="noopener" aria-label="Instagram">
+          <a class="icon-btn" href="https://www.instagram.com/muga.rri/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.5"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg>
           </a>
         </div>
 
         <div class="nav-menu">
-          <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Menú">
+          <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Menu">
             <span></span><span></span><span></span>
           </button>
           <nav class="nav-dropdown" id="nav-dropdown" role="navigation">
-            <a data-section="who"><span class="nav-num">01</span><span data-t="nav-01">Quiénes somos</span></a>
-            <a data-section="meaning"><span class="nav-num">02</span><span data-t="nav-02">¿Qué significa Mugarri?</span></a>
-            <a data-section="offer"><span class="nav-num">03</span><span data-t="nav-03">Qué ofrecemos</span></a>
-            <a data-section="collab"><span class="nav-num">04</span><span data-t="nav-04">¿Colaboramos?</span></a>
-            <a data-section="contact"><span class="nav-num">05</span><span data-t="nav-05">Contacto</span></a><a data-section="diary"><span class="nav-num">06</span><span data-t="nav-06">Diario</span></a>
+            <a data-section="who" href="/en/about/"><span class="nav-num">01</span><span data-t="nav-01">Who we are</span></a>
+            <a data-section="meaning" href="/en/meaning/"><span class="nav-num">02</span><span data-t="nav-02">What does Mugarri mean?</span></a>
+            <a data-section="offer" href="/en/what-we-offer/"><span class="nav-num">03</span><span data-t="nav-03">What we offer</span></a>
+            <a data-section="collab"><span class="nav-num">04</span><span data-t="nav-04">Collaborate?</span></a>
+            <a data-section="contact" href="/en/contact/"><span class="nav-num">05</span><span data-t="nav-05">Contact</span></a><a data-section="diary" href="/en/journal/"><span class="nav-num">06</span><span data-t="nav-06">Journal</span></a>
           </nav>
         </div>
 
-        <button class="lang-btn" id="lang-btn" aria-label="Change language">EN</button>
+        <a class="lang-btn" id="lang-btn" href="/" hreflang="es" lang="es" aria-label="Español">ES</a>
       </div>
     </div>
   </header>
@@ -470,16 +470,16 @@ button { font-family: inherit; cursor: pointer; }
         <span class="panel-num" id="panel-num"></span>
         <p class="panel-title" id="panel-title"></p>
       </div>
-      <button class="panel-close" id="panel-close" aria-label="Cerrar">✕</button>
+      <button class="panel-close" id="panel-close" aria-label="Close">✕</button>
     </div>
     <div class="panel-body" id="panel-body"></div>
   </aside>
 
   <!-- Hero: full screen -->
   <section class="hero" aria-label="Hero">
-    <img class="hero-img" width="1200" height="1600" decoding="async" fetchpriority="high" src="/img/mugarri-hero.webp" alt="Ciclista acuarela — Mugarri">
+    <img class="hero-img" width="1200" height="1600" decoding="async" fetchpriority="high" src="/img/mugarri-hero.webp" alt="Watercolour cyclist — Mugarri">
     <div class="hero-caption">
-      <h1 class="hero-caption-main" data-t="hero-text">Experiencias de gravel y trail&nbsp;running,<br>diseñadas hasta el último detalle.<br>Ningún producto es igual.</h1>
+      <h1 class="hero-caption-main" data-t="hero-text">Gravel &amp; trail running experiences,<br>tailored to the last detail.<br>No two routes are the same.</h1>
     </div>
   </section>
 
@@ -490,9 +490,9 @@ button { font-family: inherit; cursor: pointer; }
 
   <!-- Pie legal -->
   <footer class="site-legal">
-    <a data-section="legal" data-t="foot-legal">Aviso Legal</a>
+    <a data-section="legal" data-t="foot-legal">Legal Notice</a>
     <span class="sep">·</span>
-    <a data-section="privacy" data-t="foot-privacy">Política de Privacidad</a>
+    <a data-section="privacy" data-t="foot-privacy">Privacy Policy</a>
   </footer>
 
 
@@ -569,7 +569,7 @@ button { font-family: inherit; cursor: pointer; }
   </div>
   <div class="contact-item">
     <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></span>
-    <a href="https://www.instagram.com/musubigara/" target="_blank" rel="noopener">@musubigara</a>
+    <a href="https://www.instagram.com/muga.rri/" target="_blank" rel="noopener">@musubigara</a>
   </div>
   <div class="contact-item">
     <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
@@ -706,7 +706,7 @@ Pintor Pablo Uranga 12, 01008 Vitoria-Gasteiz, Álava<br>
   </div>
   <div class="contact-item">
     <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></span>
-    <a href="https://www.instagram.com/musubigara/" target="_blank" rel="noopener">@musubigara</a>
+    <a href="https://www.instagram.com/muga.rri/" target="_blank" rel="noopener">@musubigara</a>
   </div>
   <div class="contact-item">
     <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
@@ -791,17 +791,6 @@ Pintor Pablo Uranga 12, 01008 Vitoria-Gasteiz, Álava, Spain<br>
       });
       document.getElementById('lang-btn').textContent = l === 'es' ? 'EN' : 'ES';
     }
-
-    document.getElementById('lang-btn').addEventListener('click', () => {
-      const next = lang === 'es' ? 'en' : 'es';
-      setLang(next);
-      // Update canonical + og:url for crawlers
-      const base = 'https://mugarri.org/';
-      const url = location.origin + location.pathname;
-      document.getElementById('canonical-link').setAttribute('href', url);
-      const ogUrl = document.getElementById('og-url');
-      if (ogUrl) ogUrl.setAttribute('content', url);
-    });
 
     // Detect lang from URL on load
     if (window.location.pathname.startsWith('/en')) {

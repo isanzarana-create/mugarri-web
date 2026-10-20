@@ -58,5 +58,84 @@
     }
   ],
   "rootUp": ".",
-  "webDir": "."
+  "webDir": ".",
+  "pages": [
+    {
+      "id": "about",
+      "es": {
+        "path": "quienes-somos/",
+        "label": "Quiénes somos"
+      },
+      "en": {
+        "path": "en/about/",
+        "label": "Who we are"
+      }
+    },
+    {
+      "id": "meaning",
+      "es": {
+        "path": "significado/",
+        "label": "¿Qué significa Mugarri?"
+      },
+      "en": {
+        "path": "en/meaning/",
+        "label": "What does Mugarri mean?"
+      }
+    },
+    {
+      "id": "offer",
+      "es": {
+        "path": "que-ofrecemos/",
+        "label": "Qué ofrecemos"
+      },
+      "en": {
+        "path": "en/what-we-offer/",
+        "label": "What we offer"
+      }
+    },
+    {
+      "id": "gravel",
+      "es": {
+        "path": "gravel/",
+        "label": "Rutas de gravel a medida"
+      },
+      "en": {
+        "path": "en/gravel/",
+        "label": "Bespoke gravel routes"
+      }
+    },
+    {
+      "id": "trail",
+      "es": {
+        "path": "trail-running/",
+        "label": "Rutas de trail running a medida"
+      },
+      "en": {
+        "path": "en/trail-running/",
+        "label": "Bespoke trail running routes"
+      }
+    },
+    {
+      "id": "events",
+      "es": {
+        "path": "eventos/",
+        "label": "Eventos deportivos de montaña"
+      },
+      "en": {
+        "path": "en/events/",
+        "label": "Mountain sports events"
+      }
+    },
+    {
+      "id": "contact",
+      "es": {
+        "path": "contacto/",
+        "label": "Contacto"
+      },
+      "en": {
+        "path": "en/contact/",
+        "label": "Contact"
+      }
+    }
+  ]
 }
