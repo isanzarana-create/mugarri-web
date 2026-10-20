@@ -27,20 +27,35 @@ jobs:
       - name: Instalar dependencias
         run: npm ci || npm install
 
+      - name: Comprobar credenciales
+        id: creds
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          BEHOLD_FEED: ${{ secrets.BEHOLD_FEED }}
+        run: |
+          if [ -z "$IG_TOKEN" ] && [ -z "$BEHOLD_FEED" ]; then
+            echo "::warning title=Falta conectar Instagram::No hay IG_TOKEN ni BEHOLD_FEED en Settings > Secrets and variables > Actions. El robot no sincroniza hasta que se añada uno."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Sincronizar fotos
         id: sync
+        if: steps.creds.outputs.ready == 'true'
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           BEHOLD_FEED: ${{ secrets.BEHOLD_FEED }}
         run: node sync.mjs ${{ matrix.site }}.json
 
       - name: Guardar el token renovado
-        if: steps.sync.outputs.new_token != ''
+        if: steps.creds.outputs.ready == 'true' && steps.sync.outputs.new_token != ''
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: gh secret set IG_TOKEN --body "${{ steps.sync.outputs.new_token }}"
 
       - name: Publicar los cambios
+        if: steps.creds.outputs.ready == 'true'
         run: |
           git config user.name  "Musubi Gallery"
           git config user.email "bot@musubigara.org"

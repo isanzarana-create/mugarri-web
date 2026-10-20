@@ -44,6 +44,7 @@ const PUB = path.resolve(ROOT, cfg.publicDir);
 const PHOTOS_DIR = path.join(PUB, cfg.photoDir || 'fotos');
 const DATA_FILE = path.resolve(ROOT, 'data', `${cfg.site}.json`);
 const OVERRIDES = path.resolve(ROOT, 'data', `${cfg.site}.overrides.json`);
+const OVERRIDES_ROOT = path.resolve(ROOT, `${cfg.site}.overrides.json`);   // por si vive junto a la configuración
 
 const log = (...m) => console.log('·', ...m);
 
@@ -68,6 +69,10 @@ async function fetchInstagram() {
   }
   return out;
 }
+
+// Behold si la configuración lo pide, o si no hay token de Instagram pero sí feed de Behold.
+const useBehold = () => cfg.source === 'behold'
+  || (!process.env.IG_TOKEN && !!(process.env.BEHOLD_FEED || cfg.beholdFeed));
 
 async function fetchBehold() {
   const feed = process.env.BEHOLD_FEED || cfg.beholdFeed;
@@ -410,13 +415,15 @@ async function main() {
     ? await fs.readFile(path.resolve(ROOT, cfg.pageStyleFile), 'utf8') : '';
 
   const fresh = DRY ? await fetchFixture()
-    : cfg.source === 'behold' ? await fetchBehold() : await fetchInstagram();
+    : useBehold() ? await fetchBehold() : await fetchInstagram();
   log(`feed: ${fresh.length} publicaciones`);
 
   let archive = { photos: [] };
   try { archive = JSON.parse(await fs.readFile(DATA_FILE, 'utf8')); } catch { /* primera vez */ }
   let overrides = {};
-  try { overrides = JSON.parse(await fs.readFile(OVERRIDES, 'utf8')); } catch { /* opcional */ }
+  for (const f of [OVERRIDES, OVERRIDES_ROOT]) {
+    try { overrides = JSON.parse(await fs.readFile(f, 'utf8')); break; } catch { /* opcional */ }
+  }
 
   const known = new Map(archive.photos.map(p => [p.id, p]));
   let added = 0;
