@@ -1,0 +1,50 @@
+name: llms.txt
+
+# Regenera llms.txt a partir de llms.template.txt y del sitemap.
+# Se lanza solo cuando cambian las páginas, y además cada día por si el robot de
+# Instagram (que publica con el token del propio repositorio) ha tocado algo.
+# También se puede lanzar a mano desde la pestaña Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**/*.html'
+      - 'public/sitemap.xml'
+      - 'llms.template.txt'
+      - 'scripts/generate-llms.mjs'
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: llms-txt
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generar llms.txt
+        run: node scripts/generate-llms.mjs public https://mugarri.org llms.template.txt public/llms.txt
+
+      - name: Publicar si ha cambiado
+        run: |
+          git config user.name "llms-txt-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/llms.txt
+          if git diff --cached --quiet; then
+            echo "llms.txt ya está al día."
+            exit 0
+          fi
+          git commit -m "llms.txt: actualizado automáticamente"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
