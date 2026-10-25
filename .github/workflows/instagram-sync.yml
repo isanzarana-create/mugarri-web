@@ -3,8 +3,9 @@ name: Instagram → web
 # Se ejecuta cada 6 horas (a y 17 para no coincidir con la hora en punto)
 # y también a mano desde la pestaña "Actions" de GitHub.
 on:
-  schedule:
-    - cron: '17 */6 * * *'
+  # schedule desactivado (oct 2026): las fotos se suben a mano. Se puede lanzar con el botón «Run workflow».
+  # schedule:
+  #   - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:
