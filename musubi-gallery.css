@@ -108,3 +108,15 @@
   .mg-item img, .mg-item figcaption { transition: none; }
   .mg-live::before { animation: none; }
 }
+
+/* ── Enlace a la cuenta dentro del visor ────────────────────
+   El visor amplía la foto y, debajo del pie, deja una salida
+   explícita a Instagram. */
+.mg-lb .mg-lb-ig {
+  display: inline-block; margin-top: .7rem;
+  font-family: var(--font-mono); font-size: .56rem; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--paper); text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--paper) 45%, transparent);
+  padding-bottom: .16rem; transition: opacity .2s;
+}
+.mg-lb .mg-lb-ig:hover, .mg-lb .mg-lb-ig:focus-visible { opacity: .6; }
