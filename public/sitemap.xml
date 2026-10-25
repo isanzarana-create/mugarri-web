@@ -170,4 +170,28 @@
     <image:image><image:loc>https://mugarri.org/fotos/ig-2026-10-11-j8RVJQ.webp</image:loc><image:title>Cada experiencia de gravel o trail running se diseña a medida, por caminos que no…</image:title></image:image>
     <image:image><image:loc>https://mugarri.org/fotos/ig-2026-09-30-vmDFzt.webp</image:loc><image:title>Nadie se enamora de un track: se enamora de una ruta pensada para él. Turismo activo…</image:title></image:image>
   </url>
+  <url>
+    <loc>https://mugarri.org/aviso-legal/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/aviso-legal/"/>
+  </url>
+  <url>
+    <loc>https://mugarri.org/en/legal-notice/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/aviso-legal/"/>
+  </url>
+  <url>
+    <loc>https://mugarri.org/politica-privacidad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/politica-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/politica-privacidad/"/>
+  </url>
+  <url>
+    <loc>https://mugarri.org/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mugarri.org/politica-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mugarri.org/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mugarri.org/politica-privacidad/"/>
+  </url>
 </urlset>
