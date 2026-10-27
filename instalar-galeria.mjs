@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ─────────────────────────────────────────────────────────────────────────
-   MUSUBI GALLERY · instalador
+   MUGARRI GALLERY · instalador
    Mete la sección «06 Diario» en el index.html que ya existe, sin tocar
    nada más: añade la entrada del menú, el apartado en los dos idiomas con
    las marcas donde el robot escribirá las fotos, y los dos ficheros del
@@ -26,24 +26,24 @@ if (!CONFIG) { console.error('Uso: node instalar-galeria.mjs sites/<sitio>.json 
 const cfg = JSON.parse(await fs.readFile(CONFIG, 'utf8'));
 const ROOT = path.resolve(path.dirname(CONFIG), cfg.rootUp ?? '..');
 const PUB = path.resolve(ROOT, cfg.publicDir);
-const MARK = cfg.index?.marker || 'MUSUBI-GALLERY';
+const MARK = cfg.index?.marker || 'MUGARRI-GALLERY';
 
 /* Textos del apartado por idioma. Se pueden cambiar en el JSON del sitio
    (languages[].panel) sin tocar este fichero. */
 const DEFAULTS = {
   es: {
     nav: 'Diario', num: '06', title: 'Diario',
-    intro: 'Lo último que publicamos en <a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="musubigara-link">@{IG}</a>: rutas que reconocemos, carreras que montamos y el terreno tal y como está hoy. Las fotos se actualizan solas, sin que nadie toque la web.',
+    intro: 'Lo último que publicamos en <a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="ext-link">@{IG}</a>: rutas que reconocemos, carreras que montamos y el terreno tal y como está hoy. Las fotos se actualizan solas, sin que nadie toque la web.',
     live: 'En directo desde Instagram', all: 'Ver todas &rarr;', cta: 'Galería completa'
   },
   en: {
     nav: 'Journal', num: '06', title: 'Journal',
-    intro: 'The latest from <a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="musubigara-link">@{IG}</a>: routes we are scouting, races we build and the ground exactly as it is today. The photos update themselves — nobody touches the website.',
+    intro: 'The latest from <a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="ext-link">@{IG}</a>: routes we are scouting, races we build and the ground exactly as it is today. The photos update themselves — nobody touches the website.',
     live: 'Live from Instagram', all: 'See all &rarr;', cta: 'Full gallery'
   },
   eu: {
     nav: 'Egunerokoa', num: '06', title: 'Egunerokoa',
-    intro: '<a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="musubigara-link">@{IG}</a> kontuan argitaratzen duguna: aztertzen ari garen ibilbideak eta antolatzen ditugun lasterketak. Argazkiak berez eguneratzen dira.',
+    intro: '<a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="ext-link">@{IG}</a> kontuan argitaratzen duguna: aztertzen ari garen ibilbideak eta antolatzen ditugun lasterketak. Argazkiak berez eguneratzen dira.',
     live: 'Zuzenean Instagrametik', all: 'Ikusi guztiak &rarr;', cta: 'Galeria osoa'
   }
 };
@@ -110,8 +110,8 @@ async function install(file, langs) {
   h = out;
 
   // ── 4. hoja de estilo y guiones del componente ────────────────────
-  h = h.replace('</head>', `<link rel="stylesheet" href="/musubi-gallery.css">\n</head>`);
-  h = h.replace('</body>', `<script src="/gallery-data.js"></script>\n<script src="/musubi-gallery.js"></script>\n</body>`);
+  h = h.replace('</head>', `<link rel="stylesheet" href="/mugarri-gallery.css">\n</head>`);
+  h = h.replace('</body>', `<script src="/gallery-data.js"></script>\n<script src="/mugarri-gallery.js"></script>\n</body>`);
 
   if (!CHECK) await fs.writeFile(file, h);
   report.push(`· ${name}: instalada (menú + apartado 06 en ${langs.length} idioma(s) + componente)`);
@@ -130,7 +130,7 @@ for (const L of cfg.languages.slice(1)) {
 try {
   for (const f of homes) await install(f, cfg.languages);
   // ficheros del componente
-  for (const f of ['musubi-gallery.css', 'musubi-gallery.js']) {
+  for (const f of ['mugarri-gallery.css', 'mugarri-gallery.js']) {
     const dst = path.join(PUB, f);
     if (!CHECK) await fs.copyFile(path.resolve(ROOT, cfg.webDir ?? 'web', f), dst);
     report.push(`· ${f}: copiado a la web`);

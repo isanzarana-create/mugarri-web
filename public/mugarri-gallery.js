@@ -1,12 +1,12 @@
 /* ─────────────────────────────────────────────────────────────
-   MUSUBI GALLERY · lógica mínima (sin librerías, ~3 KB)
+   MUGARRI GALLERY · lógica mínima (sin librerías, ~3 KB)
    - pinta la rejilla donde se le diga (panel lateral)
    - enciende el visor (lightbox) sobre cualquier .mg-item del DOM,
      esté pintado por JS o escrito ya en el HTML por el robot.
    ───────────────────────────────────────────────────────────── */
 (function (w, d) {
-  var DATA = w.MUSUBI_GALLERY || { photos: [] };
-  var BASE = (w.MUSUBI_GALLERY_BASE || 'fotos/');
+  var DATA = w.MUGARRI_GALLERY || { photos: [] };
+  var BASE = (w.MUGARRI_GALLERY_BASE || 'fotos/');
 
   function cap(p, lang) { return (lang === 'en' ? p.en : p.es) || p.es; }
   function metaLine(p, lang) {
@@ -97,5 +97,5 @@
     show(parseInt(it.getAttribute('data-mg-index'), 10) || 0);
   });
 
-  w.MusubiGallery = { render: render, data: DATA, itemHTML: itemHTML };
+  w.MugarriGallery = { render: render, data: DATA, itemHTML: itemHTML };
 })(window, document);

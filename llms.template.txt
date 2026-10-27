@@ -1,8 +1,8 @@
 # Mugarri
 
-> Mugarri es un proyecto de turismo activo artesano de Musubigara® (Vitoria-Gasteiz). Diseña experiencias de gravel y trail running a medida en el País Vasco y Navarra: cada ruta es única, trazada por quienes conocen el territorio. También organiza eventos deportivos de montaña, como el ultra-trail LARRE Long Distance de 214 km. Web en castellano e inglés.
+> Mugarri es un proyecto de turismo activo artesano (Vitoria-Gasteiz). Diseña experiencias de gravel y trail running a medida en el País Vasco y Navarra: cada ruta es única, trazada por quienes conocen el territorio. También organiza eventos deportivos de montaña, como el ultra-trail LARRE Long Distance de 214 km. Web en castellano e inglés.
 
-English: Mugarri is an artisan active-tourism project by Musubigara®. It designs bespoke gravel and trail running experiences in the Basque Country and Navarre, works with a network of 50+ specialised accommodations, and organises mountain sports events such as the 214 km LARRE Long Distance ultra-trail.
+English: Mugarri is an artisan active-tourism project. It designs bespoke gravel and trail running experiences in the Basque Country and Navarre, works with a network of 50+ specialised accommodations, and organises mountain sports events such as the 214 km LARRE Long Distance ultra-trail.
 
 El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca el límite.
 
@@ -27,6 +27,5 @@ El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca
 
 ## Optional
 
-- [Musubigara®](https://musubigara.org/): la empresa detrás de Mugarri.
 - [LARRE Long Distance](https://larrelongdistance.org/): ultra-trail non-stop de 214 km en Álava.
 - [Instagram @muga.rri](https://www.instagram.com/muga.rri/)

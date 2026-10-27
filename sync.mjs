@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* ─────────────────────────────────────────────────────────────────────────
-   MUSUBI GALLERY · robot de sincronización Instagram → web
-   Sistema Musubigara® · se usa igual en mugarri.org, musubigara.org, etc.
+   MUGARRI GALLERY · robot de sincronización Instagram → web
+   Robot propio de mugarri.org.
 
    Qué hace, en orden:
      1. Lee el feed de la cuenta (API oficial de Instagram o Behold).
@@ -187,7 +187,7 @@ function figures(photos, lang, dir) {
 
 function jsonld(photos, lang, L, updated) {
   const url = `${cfg.domain}/${L.path}`;
-  const orgId = `${cfg.brand.parentUrl}/#organization`;
+  const orgId = `${cfg.domain}/#business`;
   const media = photos.map(p => ({
     '@type': 'ImageObject',
     contentUrl: `${cfg.domain}/${cfg.photoDir}/${p.slug}.webp`,
@@ -196,9 +196,9 @@ function jsonld(photos, lang, L, updated) {
     description: capFor(p, lang),
     ...(p.place ? { contentLocation: { '@type': 'Place', name: p.place } } : {}),
     datePublished: p.timestamp,
-    creditText: `${cfg.brand.name} · ${cfg.brand.parent}`,
-    creator: { '@type': 'Organization', name: cfg.brand.parent },
-    copyrightNotice: `© ${cfg.brand.parent}`,
+    creditText: cfg.brand.name,
+    creator: { '@type': 'Organization', name: cfg.brand.name },
+    copyrightNotice: `© ${cfg.brand.name}`,
     width: p.w, height: p.h
   }));
   return JSON.stringify({
@@ -215,12 +215,7 @@ function jsonld(photos, lang, L, updated) {
         inLanguage: cfg.languages.map(l => l.code), publisher: { '@id': orgId }
       },
       {
-        '@type': 'Organization', '@id': orgId, name: cfg.brand.parent, url: cfg.brand.parentUrl,
-        sameAs: cfg.brand.parentSameAs || []
-      },
-      {
         '@type': 'Organization', '@id': `${cfg.domain}/#business`, name: cfg.brand.name, url: `${cfg.domain}/`,
-        parentOrganization: { '@id': orgId },
         sameAs: [`https://www.instagram.com/${cfg.instagram}/`]
       },
       {
@@ -264,7 +259,7 @@ ${alt}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="${cfg.fontsHref}" rel="stylesheet">
-<link rel="stylesheet" href="/musubi-gallery.css">
+<link rel="stylesheet" href="/mugarri-gallery.css">
 <style>${PAGE_CSS}</style>
 <script type="application/ld+json">
 ${jsonld(photos, lang, L, updated)}
@@ -295,9 +290,9 @@ ${figures(photos, lang, cfg.photoDir)}
     <span><a href="/${L.home ?? ''}">${esc(L.back)}</a></span>
   </footer>
 </main>
-<script>window.MUSUBI_GALLERY_BASE='/${cfg.photoDir}/';</script>
+<script>window.MUGARRI_GALLERY_BASE='/${cfg.photoDir}/';</script>
 <script src="/gallery-data.js"></script>
-<script src="/musubi-gallery.js"></script>
+<script src="/mugarri-gallery.js"></script>
 </body>
 </html>
 `;
@@ -336,7 +331,7 @@ async function injectOne(file, photos) {
   try { html = await fs.readFile(file, 'utf8'); } catch { log('sin index.html que tocar'); return false; }
   let changed = false;
   for (const L of cfg.languages) {
-    const tag = `${cfg.index?.marker || 'MUSUBI-GALLERY'}:${L.code.toUpperCase()}`;
+    const tag = `${cfg.index?.marker || 'MUGARRI-GALLERY'}:${L.code.toUpperCase()}`;
     const re = new RegExp(`(<!-- ${tag}:START -->)([\\s\\S]*?)(<!-- ${tag}:END -->)`);
     if (!re.test(html)) continue;
     const block = `<div class="mg-grid">${panelMarkup(photos.slice(0, cfg.panelCount || 6), L.code, cfg.photoDir)}</div>`;
@@ -484,7 +479,7 @@ async function main() {
 
   // datos para el panel lateral y el visor (mismo fichero para toda la web)
   await fs.writeFile(path.join(PUB, 'gallery-data.js'),
-    `window.MUSUBI_GALLERY=${JSON.stringify({
+    `window.MUGARRI_GALLERY=${JSON.stringify({
       account: cfg.instagram,
       profileUrl: `https://www.instagram.com/${cfg.instagram}/`,
       updated,

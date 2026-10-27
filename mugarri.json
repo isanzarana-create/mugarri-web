@@ -12,19 +12,13 @@
   "square": true,
   "brand": {
     "name": "Mugarri",
-    "color": "#C21838",
-    "parent": "Musubigara®",
-    "parentUrl": "https://musubigara.org",
-    "parentSameAs": [
-      "https://www.instagram.com/musubi.gara/",
-      "https://www.linkedin.com/company/136037162/"
-    ]
+    "color": "#C21838"
   },
   "fontsHref": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap",
   "pageStyleFile": "page.css",
   "index": {
     "file": "index.html",
-    "marker": "MUSUBI-GALLERY"
+    "marker": "MUGARRI-GALLERY"
   },
   "fallbackCaption": "Gravel y trail running en el País Vasco con Mugarri",
   "languages": [
@@ -39,7 +33,7 @@
       "updatedLabel": "Actualizado",
       "follow": "Seguir en Instagram",
       "back": "Volver a mugarri.org",
-      "footer": "Un proyecto de <a href=\"https://musubigara.org\" rel=\"noopener\">Musubigara®</a>",
+      "footer": "Mugarri · Euskadi",
       "home": ""
     },
     {
@@ -53,7 +47,7 @@
       "updatedLabel": "Updated",
       "follow": "Follow on Instagram",
       "back": "Back to mugarri.org",
-      "footer": "A project by <a href=\"https://musubigara.org\" rel=\"noopener\">Musubigara®</a>",
+      "footer": "Mugarri · Basque Country",
       "home": "en/"
     }
   ],

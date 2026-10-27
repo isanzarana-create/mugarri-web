@@ -1,7 +1,6 @@
-# Musubi Gallery
+# Mugarri Gallery
 
-Sistema del grupo **Musubigara®** para llevar las fotos de Instagram a las webs
-(mugarri.org, musubigara.org, LARRE, Zurea da Hitza…) **sin widgets de terceros**:
+Sistema para llevar las fotos de Instagram a mugarri.org **sin widgets de terceros**:
 las fotos acaban alojadas en tu propio dominio, con su pie de foto, su idioma y
 sus datos estructurados. Es lo que hace que la galería sume en Google en vez de
 ser un adorno.
@@ -63,7 +62,7 @@ Si no has publicado nada, no toca nada.
 6. **Marcas en la portada.** En `index.html`, donde deba aparecer la rejilla:
 
    ```html
-   <!-- MUSUBI-GALLERY:ES:START --><!-- MUSUBI-GALLERY:ES:END -->
+   <!-- MUGARRI-GALLERY:ES:START --><!-- MUGARRI-GALLERY:ES:END -->
    ```
 
    Una marca por idioma (`:ES:`, `:EN:`, `:EU:`). El robot escribe entre ellas.
@@ -98,9 +97,8 @@ npm run prueba                  # usa fixtures/instagram.sample.json
 |---|---|
 | `sync.mjs` | El robot. No hace falta tocarlo. |
 | `sites/mugarri.json` | Configuración de Mugarri: dominio, cuenta, idiomas, textos de la página. |
-| `sites/musubigara.json` | Ejemplo de cómo se añade otra web del grupo. |
-| `web/musubi-gallery.css` | Estilo del componente. Usa los tokens de cada web (papel, tinta, granate), así que cada sitio se ve como el suyo. |
-| `web/musubi-gallery.js` | Visor de fotos (sin librerías, ~3 KB). |
+| `web/mugarri-gallery.css` | Estilo del componente. Usa los tokens de cada web (papel, tinta, granate), así que cada sitio se ve como el suyo. |
+| `web/mugarri-gallery.js` | Visor de fotos (sin librerías, ~3 KB). |
 | `web/page.css` | Estilos de la página de galería. |
 | `data/<sitio>.json` | Archivo histórico de fotos. Lo escribe el robot. |
 | `data/<sitio>.overrides.json` | Tus correcciones: traducciones de pies, lugares. Mandan sobre Instagram. |

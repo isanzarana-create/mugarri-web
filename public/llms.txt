@@ -1,8 +1,8 @@
 # Mugarri
 
-> Mugarri es un proyecto de turismo activo artesano de Musubigara® (Vitoria-Gasteiz). Diseña experiencias de gravel y trail running a medida en el País Vasco y Navarra: cada ruta es única, trazada por quienes conocen el territorio. También organiza eventos deportivos de montaña, como el ultra-trail LARRE Long Distance de 214 km. Web en castellano e inglés.
+> Mugarri es un proyecto de turismo activo artesano (Vitoria-Gasteiz). Diseña experiencias de gravel y trail running a medida en el País Vasco y Navarra: cada ruta es única, trazada por quienes conocen el territorio. También organiza eventos deportivos de montaña, como el ultra-trail LARRE Long Distance de 214 km. Web en castellano e inglés.
 
-English: Mugarri is an artisan active-tourism project by Musubigara®. It designs bespoke gravel and trail running experiences in the Basque Country and Navarre, works with a network of 50+ specialised accommodations, and organises mountain sports events such as the 214 km LARRE Long Distance ultra-trail.
+English: Mugarri is an artisan active-tourism project. It designs bespoke gravel and trail running experiences in the Basque Country and Navarre, works with a network of 50+ specialised accommodations, and organises mountain sports events such as the 214 km LARRE Long Distance ultra-trail.
 
 El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca el límite.
 
@@ -15,8 +15,8 @@ El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca
 
 ## Páginas (castellano)
 
-- [Turismo activo artesano: gravel y trail en Euskadi](https://mugarri.org/): Mugarri es un proyecto de turismo activo artesano by Musubigara®. A medida, personalizado, con mimo — cada experiencia de gravel y trail running que diseñamos es única. Ningún producto es igual.
-- [Quiénes somos: turismo activo artesano](https://mugarri.org/quienes-somos/): Mugarri es un proyecto de turismo activo artesano de Musubigara®. Diseñamos experiencias de gravel y trail running a medida en el País Vasco y Navarra.
+- [Turismo activo artesano: gravel y trail en Euskadi](https://mugarri.org/): Mugarri es un proyecto de turismo activo artesano. A medida, personalizado, con mimo — cada experiencia de gravel y trail running que diseñamos es única. Ningún producto es igual.
+- [Quiénes somos: turismo activo artesano](https://mugarri.org/quienes-somos/): Mugarri es un proyecto de turismo activo artesano. Diseñamos experiencias de gravel y trail running a medida en el País Vasco y Navarra.
 - [¿Qué significa Mugarri? La piedra que marca el límite](https://mugarri.org/significado/): Mugarri viene del euskera muga (límite) y harri (piedra): la piedra que marca el límite. Descubre por qué da nombre a nuestras rutas de gravel y trail.
 - [Qué ofrecemos: rutas de gravel y trail de autor](https://mugarri.org/que-ofrecemos/): Rutas de gravel y trail de autor, más de 50 alojamientos asociados y más de 30 años organizando eventos deportivos y culturales en el País Vasco y Navarra.
 - [Rutas de gravel a medida en el País Vasco y Navarra](https://mugarri.org/gravel/): Rutas de gravel de autor por el País Vasco y Navarra: pistas, caminos de montaña y paisajes singulares, diseñadas a medida de cada cliente.
@@ -27,8 +27,8 @@ El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca
 
 ## English
 
-- [Artisan active tourism: gravel & trail, Basque Country](https://mugarri.org/en/): Mugarri is an artisan active-tourism project by Musubigara®. Custom, tailored, con mimo — every gravel and trail running experience we design is unique. No two routes are the same.
-- [Who we are: artisan active tourism](https://mugarri.org/en/about/): Mugarri is an artisan active-tourism project by Musubigara®. We design bespoke gravel and trail running experiences in the Basque Country and Navarre.
+- [Artisan active tourism: gravel & trail, Basque Country](https://mugarri.org/en/): Mugarri is an artisan active-tourism project. Custom, tailored, con mimo — every gravel and trail running experience we design is unique. No two routes are the same.
+- [Who we are: artisan active tourism](https://mugarri.org/en/about/): Mugarri is an artisan active-tourism project. We design bespoke gravel and trail running experiences in the Basque Country and Navarre.
 - [What does Mugarri mean? The stone that marks the boundary](https://mugarri.org/en/meaning/): Mugarri comes from the Basque muga (boundary) and harri (stone): the stone that marks the boundary. Find out why it names our gravel and trail routes.
 - [What we offer: signature gravel and trail routes](https://mugarri.org/en/what-we-offer/): Signature gravel and trail routes, 50+ partner accommodations and 30+ years organising sports and cultural events in the Basque Country and Navarre.
 - [Bespoke gravel routes in the Basque Country and Navarre](https://mugarri.org/en/gravel/): Signature gravel routes across the Basque Country and Navarre: tracks, mountain paths and singular landscapes, tailored to each client’s level.
@@ -43,6 +43,5 @@ El nombre viene del euskera muga (límite) y harri (piedra): la piedra que marca
 
 ## Optional
 
-- [Musubigara®](https://musubigara.org/): la empresa detrás de Mugarri.
 - [LARRE Long Distance](https://larrelongdistance.org/): ultra-trail non-stop de 214 km en Álava.
 - [Instagram @muga.rri](https://www.instagram.com/muga.rri/)

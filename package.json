@@ -1,9 +1,9 @@
 {
-  "name": "musubi-gallery",
+  "name": "mugarri-gallery",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Sistema Musubigara®: lleva las fotos de Instagram a las webs del grupo, alojadas en dominio propio y con SEO real.",
+  "description": "Lleva las fotos de Instagram de Mugarri a mugarri.org, alojadas en dominio propio y con SEO real.",
   "scripts": {
     "sync": "node sync.mjs sites/mugarri.json",
     "prueba": "node sync.mjs sites/mugarri.json --dry",
