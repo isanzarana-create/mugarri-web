@@ -4,4 +4,33 @@ Allow: /
 # Disallow Netlify internal scripts
 Disallow: /.netlify/
 
+# Rastreadores de buscadores de IA (declarados uno a uno)
+User-agent: GPTBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /.netlify/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /.netlify/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /.netlify/
+
 Sitemap: https://mugarri.org/sitemap.xml
