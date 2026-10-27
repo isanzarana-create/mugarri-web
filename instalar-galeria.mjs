@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* ─────────────────────────────────────────────────────────────────────────
    MUGARRI GALLERY · instalador
-   Mete la sección «06 Diario» en el index.html que ya existe, sin tocar
+   Mete la sección «06 Galería» en el index.html que ya existe, sin tocar
    nada más: añade la entrada del menú, el apartado en los dos idiomas con
    las marcas donde el robot escribirá las fotos, y los dos ficheros del
    componente.
@@ -32,7 +32,7 @@ const MARK = cfg.index?.marker || 'MUGARRI-GALLERY';
    (languages[].panel) sin tocar este fichero. */
 const DEFAULTS = {
   es: {
-    nav: 'Diario', num: '06', title: 'Diario',
+    nav: 'Galería', num: '06', title: 'Galería',
     intro: 'Lo último que publicamos en <a href="https://www.instagram.com/{IG}/" target="_blank" rel="noopener" class="ext-link">@{IG}</a>: rutas que reconocemos, carreras que montamos y el terreno tal y como está hoy. Las fotos se actualizan solas, sin que nadie toque la web.',
     live: 'En directo desde Instagram', all: 'Ver todas &rarr;', cta: 'Galería completa'
   },
