@@ -220,7 +220,7 @@ function jsonld(photos, lang, L, updated) {
       },
       {
         '@type': 'BreadcrumbList', itemListElement: [
-          { '@type': 'ListItem', position: 1, name: cfg.brand.name, item: `${cfg.domain}/` },
+          { '@type': 'ListItem', position: 1, name: cfg.brand.name, item: `${cfg.domain}/${L.home ?? ''}` },
           { '@type': 'ListItem', position: 2, name: L.h1, item: url }]
       }
     ]
@@ -267,14 +267,14 @@ ${jsonld(photos, lang, L, updated)}
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
-  <a href="/" class="wordmark">${esc(cfg.brand.name)}<sup>®</sup></a>
+  <a href="/${L.home ?? ''}" class="wordmark">${esc(cfg.brand.name)}<sup>®</sup></a>
   <div class="topbar-right">
     <a class="icon-btn" href="https://www.instagram.com/${cfg.instagram}/" target="_blank" rel="noopener" aria-label="Instagram">${IG_SVG}</a>
     ${otherLinks}
   </div>
 </div></header>
 <main class="mg mg--page">
-  <p class="crumb"><a href="/">${esc(cfg.brand.name)}</a> / ${esc(L.h1)}</p>
+  <p class="crumb"><a href="/${L.home ?? ''}">${esc(cfg.brand.name)}</a> / ${esc(L.h1)}</p>
   <div class="page-head"><span class="page-num">${esc(L.num || '')}</span><h1>${esc(L.h1)}</h1></div>
   <p class="intro">${L.intro}</p>
   <p class="sub">${esc(L.updatedLabel)}: ${fdate(updated, lang)} · @${cfg.instagram}</p>
