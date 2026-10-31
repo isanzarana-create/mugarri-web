@@ -197,8 +197,10 @@ function jsonld(photos, lang, L, updated) {
     ...(p.place ? { contentLocation: { '@type': 'Place', name: p.place } } : {}),
     datePublished: p.timestamp,
     creditText: cfg.brand.name,
-    creator: { '@type': 'Organization', name: cfg.brand.name },
+    creator: { '@type': 'Organization', name: cfg.brand.name, url: `${cfg.domain}/` },
     copyrightNotice: `© ${cfg.brand.name}`,
+    license: `${cfg.domain}${lang === 'en' ? '/en/legal-notice/' : '/aviso-legal/'}`,
+    acquireLicensePage: `${cfg.domain}${lang === 'en' ? '/en/contact/' : '/contacto/'}`,
     width: p.w, height: p.h
   }));
   return JSON.stringify({
